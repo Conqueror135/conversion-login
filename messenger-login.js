@@ -24,13 +24,12 @@ window.onload = function () {
           xfbml: true,
           version: 'v18.0'
         });
-      };
-      }`;
+      };`;
 
     headTag.appendChild(scripInitAndLogin);
 
 
-    document.getElementById('messenger-login-btn').appendChild('click', () => {
+    document.getElementById('messenger-login-btn').addEventListener('click', () => {
         FB.login(function (response) {
             $.ajax({
                 url: '/auth/messenger/callback',

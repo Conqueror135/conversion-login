@@ -24,13 +24,12 @@ window.onload = function () {
           xfbml: true,
           version: 'v18.0'
         });
-      };
-      }`;
+      };`;
 
     headTag.appendChild(scripInitAndLogin);
 
 
-    document.getElementById('whatsapp-login-btn').appendChild('click', () => {
+    document.getElementById('whatsapp-login-btn').addEventListener('click', () => {
         FB.login(function (response) {
             $.ajax({
                 url: '/auth/whatsapp/callback',
