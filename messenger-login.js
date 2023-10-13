@@ -1,17 +1,5 @@
 $(document).ready(function() { 
     const headTag = document.head;
-    const linkBootstrapCss = document.createAttribute('link');
-    linkBootstrapCss.rel = 'stylesheet';
-    linkBootstrapCss.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css';
-    linkBootstrapCss.type = 'text/css';
-    headTag.appendChild(linkBootstrapCss);
-
-
-    const linkFontAwesomeCss = document.createAttribute('link');
-    linkBootstrapCss.rel = 'stylesheet';
-    linkBootstrapCss.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
-    linkBootstrapCss.type = 'text/css';
-    headTag.appendChild(linkFontAwesomeCss);
 
     const scriptAjax = document.createElement('script');
 
@@ -19,11 +7,6 @@ $(document).ready(function() {
 
     headTag.appendChild(scriptAjax);
 
-    const scriptBootsrap = document.createElement('script');
-
-    scriptBootsrap.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.min.js';
-
-    headTag.appendChild(scriptBootsrap);
 
     const scripInitAndLogin = document.createElement('script');
     scripInitAndLogin.innerHTML = `    (function (d, s, id) {
@@ -34,7 +17,6 @@ $(document).ready(function() {
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
   
-      // Khởi tạo Facebook SDK với cấu hình ứng dụng của bạn
       window.fbAsyncInit = function () {
         FB.init({
           appId: '331012676138899',
